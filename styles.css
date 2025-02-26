@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.row, .column {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border: 2px;
+    border-color: black;
+}
+
+.row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.column {
+    flex-direction: column;
+}

@@ -7,15 +7,13 @@ for (let i = 0; i < 16; i++) {
         const column = document.createElement('div');
         column.classList.add('column');
         row.appendChild(column);
-
-        const cells = document.querySelectorAll('.column');
-        cells.forEach(cell => {
-            cell.addEventListener('mouseover', () => {
-                cell.classList.add('color');
-            })
-        });
     }
     container.appendChild(row);
 }
 
-
+const cells = document.querySelectorAll('.column');
+cells.forEach(cell => {
+    cell.addEventListener('mouseover', () => {
+        cell.classList.add('color');
+    })
+});

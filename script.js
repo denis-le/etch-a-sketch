@@ -1,9 +1,17 @@
 let container = document.querySelector('.container');
+let size = 16;
 
-for (let i = 0; i < 16; i++) {
+// Creates the grid
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    side = prompt('enter grid size: ');
+});
+
+for (let i = 0; i < size; i++) {
     const row = document.createElement('div');
     row.classList.add('row');
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < size; j++) {
         const column = document.createElement('div');
         column.classList.add('column');
         row.appendChild(column);
@@ -11,6 +19,7 @@ for (let i = 0; i < 16; i++) {
     container.appendChild(row);
 }
 
+// Colors the grid
 const cells = document.querySelectorAll('.column');
 cells.forEach(cell => {
     cell.addEventListener('mouseover', () => {

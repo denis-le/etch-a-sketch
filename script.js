@@ -1,4 +1,7 @@
 let container = document.querySelector('.container');
+container.style.width = '750px';
+container.style.height= '750px';
+
 
 // Creates the grid
 const button = document.querySelector('button');
@@ -13,12 +16,18 @@ button.addEventListener('click', () => {
 });
 
 function createGrid(size) {
+    let cellSize = 750 / size + 'px';
+
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
         row.classList.add('row');
+        row.style.width = cellSize;
+        row.style.height = cellSize;
         for (let j = 0; j < size; j++) {
             const column = document.createElement('div');
             column.classList.add('column');
+            column.style.width = cellSize;
+            column.style.height = cellSize;
             row.appendChild(column);
         }
         container.appendChild(row);

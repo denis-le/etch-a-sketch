@@ -7,7 +7,11 @@ container.style.height= '750px';
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
-    size = prompt('enter grid size: ');
+    size = prompt('enter grid size (max 100): ');
+    if (size > 100 || size < 1) {
+        alert("Please enter a valid size")
+        size = prompt('enter grid size (max 100): ');
+    }
     let rows = document.querySelectorAll('.row');
     rows.forEach(row => {
         row.remove();
